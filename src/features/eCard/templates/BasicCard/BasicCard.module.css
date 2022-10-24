@@ -1,0 +1,64 @@
+.basicCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0.825rem;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+}
+
+.avatar {
+  border-radius: 999px;
+  width: 160px;
+  height: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.description {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+}
+
+.list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--secondary-color);
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.navbar {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.125rem;
+}

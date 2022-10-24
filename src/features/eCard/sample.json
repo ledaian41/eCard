@@ -1,0 +1,14 @@
+{
+  "avatar": "/images/sample.png",
+  "title": "Lê Đại An",
+  "subtitle": "Front-end Developer",
+  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  "phoneNumber": "0703940225",
+  "email": "ledaian41@gmail.com",
+  "sns": {
+    "facebook": "",
+    "instagram": "",
+    "linkedin": "",
+    "zalo": ""
+  }
+}
