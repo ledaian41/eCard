@@ -10,6 +10,7 @@ body {
   --primary-color: #1f1f1f;
   --secondary-color: #444746;
   --background-color: #fff;
+  --border-color: #444746;
 }
 
 a {
