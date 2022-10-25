@@ -1,10 +1,11 @@
-.basicCard {
+.gradientCard {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2.5rem 1.5rem;
-  background-color: var(--background-color);
-  color: var(--primary-color);
+  background: rgb(0,206,249);
+  background: linear-gradient(0deg, rgba(0,206,249,1) 0%, rgba(255,0,91,1) 100%);
+  color: var(--white);
   min-height: 100vh;
 }
 
@@ -24,13 +25,13 @@
 .subtitle {
   margin-top: 0.5rem;
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--white);
 }
 
 .description {
   text-align: center;
   font-size: 0.85rem;
-  color: var(--secondary-color);
+  color: #f1f1f1;
 }
 
 .list {
@@ -41,26 +42,14 @@
 }
 
 .item {
-  padding: 1rem 0.5rem;
-  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 2rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--white);
   font-size: 1rem;
-  color: var(--secondary-color);
+  color: var(--white);
   backdrop-filter: blur(1rem);
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar {
-  position: fixed;
-  bottom: 2rem;
-  left: 0;
-  width: 100%;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.125rem;
 }
