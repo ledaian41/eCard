@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/future/image';
 import { FaFacebookSquare, FaLinkedin, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import Footer from '@common/Footer';
 import styles from './BasicCard.module.css';
 
 export default function BasicCard( { avatar, title, subtitle, description, phoneNumber, email, sns } ) {
@@ -34,21 +35,22 @@ export default function BasicCard( { avatar, title, subtitle, description, phone
             </a>
           ) }
         </div>
-        <div className={ styles.navbar }>
-          <a>
-            <Image src="/zalo.svg" width={ 38 } height={ 38 } alt={ phoneNumber } />
-          </a>
-          <a>
-            <FaFacebookSquare size={ 40 } title={ sns.facebook } color="#4267B2" />
-          </a>
-          <a>
-            <FaInstagram size={ 40 } title={ sns.instagram } color="#e1306c" />
-          </a>
-          <a>
-            <FaLinkedin size={ 40 } title={ sns.linkedin } color="#0077b5" />
-          </a>
-        </div>
       </div>
+      <div className={ styles.navbar }>
+        <a>
+          <Image src="/zalo.svg" width={ 38 } height={ 38 } alt={ phoneNumber } />
+        </a>
+        <a>
+          <FaFacebookSquare size={ 40 } title={ sns.facebook } color="#4267B2" />
+        </a>
+        <a>
+          <FaInstagram size={ 40 } title={ sns.instagram } color="#e1306c" />
+        </a>
+        <a>
+          <FaLinkedin size={ 40 } title={ sns.linkedin } color="#0077b5" />
+        </a>
+      </div>
+      <Footer />
     </div>
   );
 }
