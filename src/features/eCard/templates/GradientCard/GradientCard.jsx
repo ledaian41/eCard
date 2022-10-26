@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { FaFacebookSquare, FaLinkedin, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import Footer from '@common/Footer';
@@ -11,7 +11,7 @@ export default function GradientCard( { avatar, title, subtitle, description, ph
       <Image className={ styles.avatar } src={ avatar } width={ 160 } height={ 160 } alt={ title } />
       <div>
         <h3 className={ styles.title }>{title}</h3>
-        <h5 className={ styles.subtitle }>{subtitle}</h5>
+        <h4 className={ styles.subtitle }>{subtitle}</h4>
         <p className={ styles.description }>{description}</p>
         <div className={ styles.list }>
           { phoneNumber && (

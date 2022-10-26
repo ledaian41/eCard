@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { FaFacebookSquare, FaLinkedin, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import Footer from '@common/Footer';
@@ -8,16 +8,25 @@ import styles from './BasicCard.module.css';
 export default function BasicCard( { avatar, title, subtitle, description, phoneNumber, email, sns } ) {
   return (
     <div className={ styles.basicCard }>
-      <Image className={ styles.avatar } src={ avatar } width={ 160 } height={ 160 } alt={ title } />
+      <Image
+        className={ styles.avatar }
+        src={ avatar }
+        placeholder="blur"
+        blurDataURL="/images/placeholder.png"
+        width={ 160 }
+        height={ 160 }
+        alt={ title }
+        priority
+      />
       <div>
         <h3 className={ styles.title }>{title}</h3>
-        <h5 className={ styles.subtitle }>{subtitle}</h5>
+        <h4 className={ styles.subtitle }>{subtitle}</h4>
         <p className={ styles.description }>{description}</p>
         <div className={ styles.list }>
           { phoneNumber && (
             <a href={ `tel:${ phoneNumber }` }>
               <div className={ styles.item }>
-                <FaPhoneAlt title={ phoneNumber } color="#73e119ff" />
+                <FaPhoneAlt title={ phoneNumber } size={ 24 } color="#73e119ff" />
                 <span>
                   {phoneNumber}
                 </span>
@@ -27,7 +36,7 @@ export default function BasicCard( { avatar, title, subtitle, description, phone
           { email && (
             <a href={ `mailto:${ email }` }>
               <div className={ styles.item }>
-                <SiGmail title={ email } color="#c71610" />
+                <SiGmail title={ email } size={ 24 } color="#c71610" />
                 <span>
                   {email}
                 </span>
