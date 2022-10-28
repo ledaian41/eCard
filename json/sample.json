@@ -1,14 +1,15 @@
 {
+  "id": "sample",
   "avatar": "/images/sample.png",
-  "title": "Lê Đại An",
-  "subtitle": "Front-end Developer",
-  "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  "phoneNumber": "0703940225",
-  "email": "ledaian41@gmail.com",
+  "title": "Gretchen Workman",
+  "subtitle": "Software Engineer",
+  "description": "consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales",
+  "phoneNumber": "1-155-610-7965",
+  "email": "euismod.ac@icloud.ca",
   "sns": {
-    "facebook": "https://www.facebook.com/ledaian41",
-    "instagram": "https://www.instagram.com/ledaian",
-    "linkedin": "https://www.linkedin.com/in/an-l%C3%AA-338457166",
-    "zalo": "https://zalo.me/0703940225"
+    "facebook": "https://www.facebook.com",
+    "instagram": "https://www.instagram.com",
+    "linkedin": "https://www.linkedin.com",
+    "zalo": "https://zalo.me"
   }
 }

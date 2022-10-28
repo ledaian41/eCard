@@ -1,13 +1,21 @@
 import React from 'react';
 import { BasicCard, GradientCard } from '@eCard';
-import styles from '../styles/Home.module.css';
-import sample from '../features/eCard/sample.json';
+import { readJsonFile } from './api/profile/[id]';
 
-export default function Home() {
+export default function Home( { sampleData } ) {
   return (
-    <div className={ styles.templateLayout }>
-      <BasicCard { ...sample } />
-      <GradientCard { ...sample } />
+    <div className="template-grid-layout">
+      <BasicCard { ...sampleData } />
+      <GradientCard { ...sampleData } />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const data = readJsonFile( 'sample' );
+  return {
+    props: {
+      sampleData: data,
+    },
+  };
 }

@@ -1,13 +1,17 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import useProfile from '@common/useProfile';
-import { BasicCard } from '@eCard';
+import { GradientCard } from '@eCard';
 import { listAllJsonFiles, readJsonFile } from './api/profile/[id]';
 
 export default function ViewPage( { fallbackData } ) {
   const { query: { id } } = useRouter();
   const { profile: profileData } = useProfile( id, fallbackData );
-  return <BasicCard { ...profileData } />;
+  return (
+    <div className="view-container">
+      <GradientCard { ...profileData } />
+    </div>
+  );
 }
 
 export async function getStaticPaths() {

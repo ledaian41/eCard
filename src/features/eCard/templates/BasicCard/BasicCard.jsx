@@ -46,16 +46,16 @@ export default function BasicCard( { avatar, title, subtitle, description, phone
         </div>
       </div>
       <div className={ styles.navbar }>
-        <a>
+        <a href={ sns.zalo }>
           <Image src="/zalo.svg" width={ 38 } height={ 38 } alt={ phoneNumber } />
         </a>
-        <a>
+        <a href={ sns.facebook }>
           <FaFacebookSquare size={ 40 } title={ sns.facebook } color="#4267B2" />
         </a>
-        <a>
+        <a href={ sns.instagram }>
           <FaInstagram size={ 40 } title={ sns.instagram } color="#e1306c" />
         </a>
-        <a>
+        <a href={ sns.linkedin }>
           <FaLinkedin size={ 40 } title={ sns.linkedin } color="#0077b5" />
         </a>
       </div>
