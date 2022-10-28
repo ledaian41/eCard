@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import useProfile from '@common/useProfile';
 import { BasicCard } from '@eCard';
-import { readJsonFile } from './api/profile/[id]';
+import { listAllJsonFiles, readJsonFile } from './api/profile/[id]';
 
 export default function ViewPage( { fallbackData } ) {
   const { query: { id } } = useRouter();
@@ -11,17 +11,20 @@ export default function ViewPage( { fallbackData } ) {
 }
 
 export async function getStaticPaths() {
+  const files = listAllJsonFiles();
   return {
-    paths: [ { params: { id: 'sample' } } ],
-    fallback: false,
+    paths: files.map( ( fileName ) => ( { params: { id: fileName } } ) ),
+    fallback: 'blocking',
   };
 }
 
 export async function getStaticProps( context ) {
   const { params: { id } } = context;
-  return {
+  const data = readJsonFile( id );
+  return data != null ? {
     props: {
-      fallbackData: await readJsonFile( id ),
+      fallbackData: data,
     },
-  };
+    revalidate: 60 * 5, // 5 minutes
+  } : { notFound: true };
 }

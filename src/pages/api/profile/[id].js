@@ -1,20 +1,31 @@
 import path from 'path';
-import { promises as fs } from 'fs';
+import fs from 'fs';
 
-export const readJsonFile = async ( fileName ) => {
+export const listAllJsonFiles = () => {
+  const jsonDirectory = path.join( process.cwd(), 'json' );
+  return fs.readdirSync( jsonDirectory )
+    .filter( ( file ) => path.extname( file ) === '.json' )
+    .map( ( fileName ) => path.parse( fileName ).name );
+};
+
+export const readJsonFile = ( fileName ) => {
   // Find the absolute path of the json directory
   const jsonDirectory = path.join( process.cwd(), 'json' );
   // Read the json data file data.json
-  const jsonData = await fs.readFile( `${ jsonDirectory }/${ fileName }.json`, 'utf8' );
-  return JSON.parse( jsonData );
+  try {
+    const jsonData = fs.readFileSync( `${ jsonDirectory }/${ fileName }.json`, 'utf8' );
+    return JSON.parse( jsonData );
+  } catch ( e ) {
+    return null;
+  }
 };
 
-export default async function handler( req, res ) {
+export default function handler( req, res ) {
   const { query: { id } } = req;
-  try {
-    const fileContents = await readJsonFile( id );
+  const fileContents = readJsonFile( id );
+  if ( fileContents != null ) {
     res.status( 200 ).json( fileContents );
-  } catch ( e ) {
+  } else {
     res.status( 404 ).json( { message: 'Not found' } );
   }
 }
