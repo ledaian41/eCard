@@ -76,7 +76,7 @@ export default function GradientCard( { avatar, title, subtitle, description, ph
           ) }
         </div>
       </div>
-      <Footer style={ { marginTop: 'auto' } } />
+      <Footer style={ { marginTop: 'auto', paddingTop: '2rem' } } />
     </div>
   );
 }

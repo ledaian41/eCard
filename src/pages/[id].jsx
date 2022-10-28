@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import useProfile from '@common/useProfile';
-import { GradientCard } from '@eCard';
+import { BasicCard } from '@eCard';
 import { listAllJsonFiles, readJsonFile } from './api/profile/[id]';
 
 export default function ViewPage( { fallbackData } ) {
@@ -9,7 +9,7 @@ export default function ViewPage( { fallbackData } ) {
   const { profile: profileData } = useProfile( id, fallbackData );
   return (
     <div className="view-container">
-      <GradientCard { ...profileData } />
+      <BasicCard { ...profileData } />
     </div>
   );
 }
