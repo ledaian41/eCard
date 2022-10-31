@@ -1,0 +1,12 @@
+{
+  "theme-1": {
+    "gradient-background-color": "linear-gradient(0deg, rgba(0,206,249,1) 0%, rgba(255,0,91,1) 100%)",
+    "gradient-primary-color": "#fff",
+    "gradient-secondary-color": "#f1f1f1"
+  },
+  "theme-2": {
+    "gradient-background-color": "linear-gradient(0deg, rgba(0,206,249,1) 0%, rgba(0,255,147,1) 100%)",
+    "gradient-primary-color": "#000",
+    "gradient-secondary-color": "#1f1f1f"
+  }
+}

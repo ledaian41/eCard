@@ -1,0 +1,14 @@
+{
+  "theme-1": {
+    "basic-background-color": "#fff",
+    "basic-primary-color": "#1f1f1f",
+    "basic-secondary-color": "#444746",
+    "basic-border-color": "#444746"
+  },
+  "theme-2": {
+    "basic-background-color": "#000",
+    "basic-primary-color": "#bebebe",
+    "basic-secondary-color": "#fefefe",
+    "basic-border-color": "#fefefe"
+  }
+}
