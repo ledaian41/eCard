@@ -1,5 +1,5 @@
 import React from 'react';
-import { BasicCard, GradientCard } from '@eCard';
+import { BasicCard, GradientCard, PillarCard } from '@eCard';
 import { readJsonFile } from './api/profile/[id]';
 
 export default function Home( { sampleData } ) {
@@ -7,6 +7,7 @@ export default function Home( { sampleData } ) {
     <div className="template-grid-layout">
       <BasicCard { ...sampleData } />
       <GradientCard { ...sampleData } />
+      <PillarCard { ...sampleData } />
     </div>
   );
 }

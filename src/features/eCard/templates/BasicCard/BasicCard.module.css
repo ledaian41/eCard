@@ -48,7 +48,6 @@
   align-items: center;
   gap: 1rem;
   border: 1px solid var(--basic-border-color);
-  font-size: 1rem;
   color: var(--basic-secondary-color);
   backdrop-filter: blur(1rem);
   background-color: rgba(255, 255, 255, 0.1);

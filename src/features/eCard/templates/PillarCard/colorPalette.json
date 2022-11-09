@@ -1,0 +1,7 @@
+{
+  "default": {
+    "pillar-banner-color": "linear-gradient(to right, rgba(242,82,100,1) 0%, rgba(240,80,136,1) 100%)",
+    "pillar-primary-color": "#bebebe",
+    "pillar-secondary-color": "#888888"
+  }
+}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 import { FaFacebookSquare, FaLinkedin, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import Avatar from '@common/Avatar';
 import ColorStyle from '@common/ColorStyle';
 import Footer from '@common/Footer';
 import colorPalette from './colorPalette.json';
@@ -13,7 +14,7 @@ export default function GradientCard( { avatar, title, subtitle, description, ph
     <>
       <ColorStyle colorPalette={ colorPalette[theme] } />
       <div className={ styles.gradientCard }>
-        <Image className={ styles.avatar } src={ avatar } width={ 160 } height={ 160 } alt={ title } />
+        <Avatar src={ avatar } alt={ title } />
         <div>
           <h3 className={ styles.title }>{title}</h3>
           <h4 className={ styles.subtitle }>{subtitle}</h4>
